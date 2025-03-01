@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Epic Shows</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand  text-success mx-5" href="#">EPIC-SHOWS</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active   text-success" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-success" href="#">TV Shows</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-success" href="#">Movies</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle  text-success" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categories
+                    </a>
+                    <ul class="dropdown-menu bg-dark p-3">
+                      <li><a class="dropdown-item text-success" href="#">Tv Series</a></li>
+                      <li><a class="dropdown-item text-success" href="#">Drama</a></li>
+                      <li><a class="dropdown-item text-success" href="#">Comedy</a></li>
+                      <li><a class="dropdown-item text-success" href="#">Action and Adventure</a></li>
+                      <li><a class="dropdown-item text-success" href="#">Thriller and Mystery</a></li>
+                      <li><a class="dropdown-item text-success" href="#">Science Fiction (Sci-Fi)</a></li>
+                      <li><a class="dropdown-item text-success" href="#">Thriller and Mystery</a></li>
+                      <li><a class="dropdown-item text-success" href="#">Documentary and biographical</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item  text-success" href="#">Other Categories...</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <button class="btn btn-outline-success mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Login</button>
+                </form>
+              </div>
+            </div><!-- /container-fluid -->
+          </nav>
+    </header>
+    
+    <main>
+        <div class="home">
+            <div class="offcanvas offcanvas-top mx-auto " tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header bg-success">
+                  <h5 class="offcanvas-title " id="offcanvasTopLabel">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    
+                    <form action="/action_page.php">
+                        <div class="mb-3 mt-3">
+                            <label for="exampleInputEmail1" class="form-label  text-success">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="pwd" class="form-label text-success">Password:</label>
+                          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                        </div>
+                        
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label text-success" for="flexSwitchCheckDefault">Remember me</label>
+                        </div>
+                          <hr>
+                        <div class="row justify-content-evenly"> 
+                            <button type="submit" class="btn btn-success col-4">Login</button>
+                            <button type="button" class="btn btn-success col-4" data-bs-dismiss="offcanvas" aria-label="Close">Cancel</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+            <aside>
+              <div class="d-flex  flex-column floating-icons position-fixed top-50 end-0 translate-middle-y ">
+                <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-square-facebook mt-3 mx-5"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram mt-3 mx-5"></i></a>
+                <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter mt-3 mx-5"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin  mt-3 mx-5"></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-square-whatsapp  mt-3 mx-5"></i></a>
+            </div> 
+            </aside>
+            
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" >
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active bg-light" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2 " ></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"  ></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="images/hotd3.jpg" class="d-block w-100" alt="got" height="700">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>House of the Dragon</h2>
+                      <p>An internal succession war within House Targaryen at the height of its power, 172 years before the birth of Daenerys Targaryen.</p>
+                      <button type="button" class="btn btn-dark btn-lg text-success">Show Episodes</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="images/squid-game-4k-3840x2160-12370.jpg" class="d-block w-100" alt="you" height="700">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Squid Game</h2>
+                      <p>Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes: a survival game that has a whopping 45.6 billion-won prize at stake.</p>
+                      <button type="button" class="btn btn-dark btn-lg text-success">Show Episodes</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="images/the-last-of-us-3840x2160-11880.jpeg" class="d-block w-100" alt="vikings" height="700">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>The Last of Us</h2>
+                      <p>After a global pandemic destroys civilization, a hardened survivor takes charge of a 14-year-old girl who may be humanity's last hope.</p>
+                      <button type="button" class="btn btn-dark btn-lg text-success">Show Episodes</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="images/lost.jpg" class="d-block w-100 " alt="friends" height="700">
+                    <div class="carousel-caption d-md-block">
+                      <h2>Lost</h2>
+                      <p>The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.</p>
+                      <button type="button" class="btn btn-dark btn-lg text-success">Show Episodes</button>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+        </div><!-- /home -->
+
+    </main>
+  
+      <section class="welcome">
+        <div class="container-fluid p-5 bg-dark text-success rounded-2 my-4">
+          <h1 class="colorful">Welcome to Epic Shows</h1>
+          <p>
+            Dive into a world of endless entertainment, where every click brings you closer to your next favorite film or series.
+            From timeless classics to the latest blockbusters, we've got it all. <br>
+            Enjoy browsing through our vast library and let the adventure begin!</p>
+          <button type="button" class="btn btn-outline-success">Start your journey</button>
+        </div><!-- /container-fluid -->
+      </section>
+      <hr>
+
+      <section>
+        <div class="container-fluid text-center bg-success p-3 mb-3 rounded-3 text-light">
+          <h2>Explore Our Top Picks</h2>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <h4> 1# Featured Picks</h4>
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <strong>Title: </strong>The Crown <br>
+                <strong>Description: </strong> Dive into the captivating story of Queen Elizabeth II and the challenges she faces throughout her reign in this critically acclaimed series.
+                <br>
+                <br><strong>Title: </strong>Inception <br>
+                <strong>Description: </strong> Embark on a mind-bending journey with this sci-fi thriller, where a skilled thief enters the dreams of others to steal secrets.
+                </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <h4>2# New Arrivals</h4>
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"><strong>Title: </strong>The Mandalorian <br>
+                <strong>Description: </strong> Join the adventures of a lone bounty hunter in the Star Wars universe as he navigates through the galaxy with his young companion.
+                <br>
+                <br><strong>Title: </strong>Knives Out 2 <br>
+                <strong>Description: </strong> Enjoy the latest installment of this thrilling mystery series, where a new case unfolds with unexpected twists and turn</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <h4>3# Trending Now</h4> 
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"><strong>Title: </strong>Squid Game <br>
+                <strong>Description: </strong> Discover the intense and gripping story of contestants competing in deadly games for a chance to win a massive cash prize.
+
+                <br>
+                <br><strong>Title: </strong>Bridgerton <br>
+                <strong>Description: </strong>Explore the glamorous world of Regency-era London, filled with romance, scandal, and intrigue in this popular series.
+              </div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container-fluid bg-success-subtle py-4">
+          <div class="container-fluid text-center bg-success p-3 mb-3 rounded-3 text-light">
+            <h2>Translate From English to Arabic</h2>
+          </div>
+          <div class="container">
+            <h2>
+              Write a Text to Translate
+            </h2>
+            <button type="button" class="btn btn-secondary copybtn" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Copy to Clipboard" >
+            Copy
+            </button>
+            <div class="form-floating mt-2">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Add Your Text to Translate</label>
+            </div>
+          </div>
+        </div>
+<hr>
+      <div class="container-fluid bg-success-subtle py-4">
+        <div class="container-fluid text-center bg-success p-3 mb-3 rounded-3 text-light">
+          <h2>Translate From English to French</h2>
+        </div>
+        <div class="container">
+          <h2>
+            Write a Text to Translate
+          </h2>
+          <button type="button" class="btn btn-secondary copybtn" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Copy to Clipboard" >
+          Copy
+          </button>
+          <div class="form-floating mt-2">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Add Your Text to Translate</label>
+          </div>
+        </div>
+      </div>
+<hr>
+    <div class="container-fluid bg-success-subtle py-4">
+      <div class="container-fluid text-center bg-success p-3 mb-3 rounded-3 text-light">
+        <h2>Translate From English to German</h2>
+      </div>
+      <div class="container">
+        <h2>
+          Write a Text to Translate
+        </h2>
+        <button type="button" class="btn btn-secondary copybtn" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Copy to Clipboard" >
+        Copy
+        </button>
+        <div class="form-floating mt-2">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Add Your Text to Translate</label>
+        </div>
+      </div>
+    </div>
+    <hr>
+      </section>
+
+      <section>
+        <div class="container-fluid best-img">
+
+        </div>
+        <div class="container-fluid text-center bg-dark p-3 mb-3 rounded-3 text-success">
+          <h2 class="colorful">Greatest Shows of All Time</h2>
+        </div>
+
+      
+      
+        
+        <div class="container pt-3">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mt-lg-3 mb-2">
+              <div class="card best-cards shadow">
+                <img src="images/Game-of-Thrones.jpg" class="card-img-top img-thumbnail" alt="GoT">
+                <div class="card-body">
+                  <button type="button" class="btn btn-success position-relative z-3"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <h3 class="card-title">Game of Thrones</h3>
+                  
+                  <p class="card-text">
+                    <strong>Genre: </strong>Action, Adventure, Drama <br>
+                    <strong>Years: </strong>2011–2019 <br>
+                    <strong>Creators: </strong>David Benioff, D. B. Weiss <br>
+                    <strong>Main Cast: </strong>Emilia Clarke, Kit Harington, Lena Headey</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-lg-3 mb-2">
+              <div class="card best-cards shadow">
+                <img src="images/Friends.jpg" class="card-img-top img-thumbnail" alt="friends">
+                <div class="card-body">
+                  <button type="button" class="btn btn-success position-relative z-3"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <h3 class="card-title">Friends</h3>
+                  
+                  <p class="card-text">
+                    <strong>Genre: </strong>Comedy, Romance <br>
+                    <strong>Years: </strong>1994–2004 <br>
+                    <strong>Creators: </strong>David Crane, Marta Kauffman<br>
+                    <strong>Main Cast: </strong> Jennifer Aniston, Courteney Cox, Lisa Kudrow</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-lg-3 mb-2">
+              <div class="card best-cards shadow">
+                <img src="images/Sopranos.jpg" class="card-img-top img-thumbnail" alt="The Sopranos">
+                <div class="card-body">
+                  <button type="button" class="btn btn-success position-relative z-3"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <h3 class="card-title">The Sopranos</h3>
+                  
+                  <p class="card-text">
+                    <strong>Genre: </strong>Crime, Drama <br>
+                    <strong>Years: </strong>1999–2007 <br>
+                    <strong>Creators: </strong>David Chase<br>
+                    <strong>Main Cast: </strong>James Gandolfini, Edie Falco, Lorraine Bracco</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-lg-3 mb-2">
+              <div class="card best-cards shadow">
+                <img src="images/Mad-Men.jpg" class="card-img-top img-thumbnail" alt="Mad Men">
+                <div class="card-body">
+                  <button type="button" class="btn btn-success position-relative z-3"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <h3 class="card-title">Mad Men</h3>
+                  
+                  <p class="card-text">
+                    <strong>Genre: </strong>Drama<br>
+                    <strong>Years: </strong>2007–2015 <br>
+                    <strong>Creators: </strong>Matthew Weiner<br>
+                    <strong>Main Cast: </strong>Jon Hamm, Elisabeth Moss, Vincent Kartheiser</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-lg-3 mb-2">
+              <div class="card best-cards shadow">
+                <img src="images/Office.jpg" class="card-img-top img-thumbnail" alt="The Office">
+                <div class="card-body">
+                  <button type="button" class="btn btn-success position-relative z-3"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <h3 class="card-title">The Office</h3>
+                  
+                  <p class="card-text">
+                    <strong>Genre: </strong>Comedy <br>
+                    <strong>Years: </strong>2005–2013 <br>
+                    <strong>Creators: </strong>Greg Daniels <br>
+                    <strong>Main Cast: </strong> Steve Carell, Rainn Wilson, John Krasinski</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-lg-3 mb-2">
+              <div class="card best-cards shadow">
+                <img src="images/Succession.jpg" class="card-img-top img-thumbnail" alt="Succession">
+                <div class="card-body">
+                  <button type="button" class="btn btn-success position-relative z-3"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <h3 class="card-title">Succession</h3>
+                  
+                  <p class="card-text">
+                    <strong>Genre: </strong>Drama<br>
+                    <strong>Years: </strong>2018–present <br>
+                    <strong>Creators: </strong>Jesse Armstrong <br>
+                    <strong>Main Cast: </strong>Brian Cox, Jeremy Strong, Sarah Snook</p>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-evenly">
+              <div class="col-12 col-md-6 col-lg-4 mt-lg-3 mb-2">
+                <div class="card best-cards shadow">
+                  <img src="images/Breaking-Bad.jpg" class="card-img-top img-thumbnail" alt="Breaking Bad">
+                  <div class="card-body">
+                    <button type="button" class="btn btn-success position-relative z-3"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                    <h3 class="card-title">Breaking Bad</h3>
+                    
+                    <p class="card-text">
+                      <strong>Genre: </strong>Drama, thriller, Drug crime  <br>
+                      <strong>Years: </strong>2008–2013 <br>
+                      <strong>Creators: </strong>Bryan CranstonAaron PaulAnna Gunn <br>
+                      <strong>Main Cast: </strong>Bryan Cranston, Aaron Paul, Anna Gunn</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-lg-3 mb-2">
+                <div class="card best-cards shadow">
+                  <img src="images/The-Wire.jpg" class="card-img-top img-thumbnail" alt="The Wire
+                  ">
+                  <div class="card-body">
+                    <button type="button" class="btn btn-success position-relative z-3"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                    <h3 class="card-title">The Wire
+                    </h3>
+                    
+                    <p class="card-text">
+                      <strong>Genre: </strong>Crime, Drama, Thriller <br>
+                      <strong>Years: </strong>2002–2008 <br>
+                      <strong>Creators: </strong>David Simon <br>
+                      <strong>Main Cast: </strong>Dominic West, Lance Reddick, Sonja Sohn</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </section>
+        
+      <section>
+        <div class="container-fluid oscars col-12 mt-5">
+
+        </div>
+        <hr>
+        <div class="container-fluid text-center bg-dark p-3 mb-3  rounded-3 text-success">
+          <h2 class="colorful">Oscars Winners 2024</h2>
+        </div>
+        <div class="container py-3">
+          <div class="row ">
+            <div class="oscars-card  col-12 col-md-6 col-lg-4 mt-lg-3 rounded-5">
+              <div class="card  position-relative oscar-card mb-2 border-0">
+                <img src="images/murphy.jpeg" class="card-img rounded-5" alt="Cillian Murphy">
+                <div class="card-img-overlay bg-dark text-light bg-opacity-50 rounded-5 ">
+                  <h5 class="card-title">Actor in a Leading Role</h5>
+                  <p class="card-text">Cillian Murphy / Oppenheimer</p>
+                  <div class="small-img position-absolute bottom-0 ">
+                    <img src="images/murphy2.jpg" class="rounded-circle h-50 w-25" alt="Cillian Murphy">
+                    <p class="card-text">Cillian Murphy: <br><small>25 May 1976, Douglas,Cork, Ireland</small></p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="oscars-card  col-12 col-md-6 col-lg-4 mt-lg-3 rounded-5">
+              <div class="card position-relative oscar-card  mb-2 border-0">
+                <img src="images/stone.jpg" class="card-img  rounded-5" alt="Emma Stone">
+                <div class="card-img-overlay bg-dark text-light bg-opacity-50  rounded-5">
+                  <h5 class="card-title">Actress in a Leading Role</h5>
+                  <p class="card-text">Emma Stone / Poor Things</p>
+                  <div class="small-img position-absolute bottom-0 ">
+                    <img src="images/stone2.jpg" class="rounded-circle w-25" alt="Emma Stone">
+                    <p class="card-text">Emma Stone: <br><small>6 November 1988 , Scottsdale, Arizona</small></p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="oscars-card  col-12 col-md-6 col-lg-4 mt-lg-3 rounded-5">
+              <div class="card position-relative oscar-card  mb-2 border-0">
+                <img src="images/nolan.jpg" class="card-img rounded-5" alt="Christopher Nolan">
+                <div class="card-img-overlay bg-dark text-light bg-opacity-50 rounded-5">
+                  <h5 class="card-title">Directing</h5>
+                  <p class="card-text">Christopher Nolan / Oppenheimer</p>
+                  <div class="small-img position-absolute bottom-0 ">
+                    <img src="images/nolan2.jpg" class="rounded-circle  w-25" alt="Christopher Nolan">
+                    <p class="card-text">Christopher Nolan: <br><small>30 July 1970, Westminster, London, United Kingdom</small></p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+
+
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+      <h2 class="my-5 text text-center h1 colorful ">Upcoming Tv Shows</h2>
+      <div class="container">
+        <div class="card mb-5 Upcoming-card overflow-hidden" >
+          <div class="row no-gutters flex-md-row-reverse">
+            <div class="col-12 col-md-4 d-block d-md-none ">
+              <img src="images/mission_impossible__the_final_reckoning.jpg" class="card-img-top" alt="..." style="height: 400px !important;">
+            </div>
+            <div class="col-12 col-md-4 d-none d-md-block ">
+              <img src="images/mission_impossible__the_final_reckoning.jpg" class="card-img poster" alt="..." style="height: 500px !important;">
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="card-body mx-lg-2">
+                <h3 class="card-title mt-lg-4 colorful">Mission: Impossible - The Final Reckoning</h3>
+                <span class="badge bg-success mb-lg-4"></i>Adventure Epic</span>
+                <span class="badge bg-success"></i>Action</span>
+                <span class="badge bg-success"></i>Thriller</span>
+                <p class="release-date text-secondary"><i class="fa-solid fa-calendar-days"></i> Releases May 23, 2025</p>
+                <div class="line-under mb-lg-3 bg-success"></div>
+                <p class="card-text pb-lg-5">Mission: Impossible – The Final Reckoning is an upcoming American action spy film directed by Christopher McQuarrie from a screenplay he co-wrote with Erik Jendresen. The direct sequel to Mission: Impossible – Dead Reckoning Part One (2023), it is the eighth installment in the Mission: Impossible film series.
+                    Tom Cruise, Hayley Atwell, Ving Rhames, Simon Pegg, Vanessa Kirby, Esai Morales, Pom Klementieff, Henry Czerny, Angela Bassett, and Rolf Saxon reprise their roles from the previous films.</p>
+                <div class="upcoming-buttons mt-lg-5 mx-lg-3 ">
+                  <button type="button" class="btn btn-dark text-success"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <button type="button" class="btn btn-dark text-success"><i class="fa-solid fa-clock"></i>120 Minutes</button>
+                  <button type="button" class="btn btn-dark"><a href="https://www.youtube.com/watch?v=NOhDyUmT9z0" class="text-success" target="_blank"><i class="fa-solid fa-play text-success"></i> Show Trailer</a></button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="card mb-5 Upcoming-card  overflow-hidden " >
+          <div class="row no-gutters">
+            <div class="col-12 col-md-4 d-block d-md-none">
+              <img src="images/You_Season_5.jpg" class="card-img-top  " alt="..." style="height: 400px !important;">
+            </div>
+            <div class="col-12 col-md-4 d-none d-md-block">
+              <img src="images/You_Season_5.jpg" class="card-img poster2" alt="..." style="height: 500px !important;">
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="card-body mx-lg-2">
+                <h3 class="card-title mt-4 colorful">YOU : Season 5</h3>
+                <span class="badge bg-dark text-success mb-lg-4"></i>Dark Romance</span>
+                <span class="badge bg-dark text-success"></i>Psychological Drama</span>
+                <span class="badge bg-dark text-success"></i>Crime</span>
+                <span class="badge bg-dark text-success"></i>Thriller</span>
+                <br class="release-date text-secondary"><i class="fa-solid fa-calendar-days"></i> Released April 24, 2025</p>
+                <div class="line-under mb-lg-3 bg-dark"></div>
+                <p class="card-text pb-lg-5">The fifth and final season of the American psychological thriller television series You was ordered by Netflix on March 24, 2023.
+                    You series co-creator Sera Gamble left as showrunner and was replaced by Michael Foley and Justin W. Lo. Series star Penn Badgley returns as Joe Goldberg, with Charlotte Ritchie returning from the previous season; and Madeline Brewer, Anna Camp and Griffin Matthews joining the main cast. Filming began in March 2024 and ended that August.
+                  The ten-episode season is scheduled to be released on April 24, 2025.</p>
+                <div class="upcoming-buttons mt-lg-5  mx-lg-3">
+                  <button type="button" class="btn btn-success text-light"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <button type="button" class="btn btn-success text-light"><i class="fa-solid fa-clock"></i> 41-60m/Ep</button>
+                  <button type="button" class="btn btn-success"><a href="https://www.youtube.com/watch?v=RtsK_1Owu3A" class="text-light" target="_blank"><i class="fa-solid fa-play text-light"></i> Show Trailer</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="card mb-5 Upcoming-card  overflow-hidden ">
+          <div class="row no-gutters flex-md-row-reverse">
+            <div class="col-12 col-md-4 d-block d-md-none">
+              <img src="images/superman.png" class="card-img-top" alt="..." style="height: 400px !important;">
+            </div>
+            <div class="col-12 col-md-4 d-none d-md-block">
+              <img src="images/superman.png" class="card-img poster" alt="..." style="height: 500px !important;">
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="card-body mx-lg-2">
+                <h3 class="card-title mt-4 colorful">Superman</h3>
+                <span class="badge bg-success mb-lg-4"></i>Superhero</span>
+                <span class="badge bg-success"></i>Action</span>
+                <span class="badge bg-success"></i>Fantasy</span>
+                <p class="release-date text-secondary"><i class="fa-solid fa-calendar-days"></i> Expected July 11, 2025</p>
+                <div class="line-under mb-lg-3 bg-success"></div>
+                <p class="card-text pb-lg-5">Superman is an upcoming American superhero film based on the eponymous character from DC Comics. Produced by DC Studios and to be distributed by Warner Bros. Pictures, it will be the first film in the DC Universe (DCU) and a reboot of the Superman film series.
+                    The film is written and directed by James Gunn and stars David Corenswet as Clark Kent / Superman, alongside Rachel Brosnahan, Nicholas Hoult, Edi Gathegi, Anthony Carrigan, Nathan Fillion, Isabela Merced, Skyler Gisondo, Sara Sampaio, María Gabriela de Faría, Wendell Pierce, Alan Tudyk, Pruitt Taylor Vince, and Neva Howell. The film explores Superman's journey to reconcile his alien heritage with his human family.</p>
+                <div class="upcoming-buttons mt-lg-3  mx-lg-3">
+                  <button type="button" class="btn btn-dark text-success"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <button type="button" class="btn btn-dark text-success"><i class="fa-solid fa-clock"></i>150 Minutes</button>
+                  <button type="button" class="btn btn-dark"><a href="https://www.youtube.com/watch?v=8u2icznj4LE" class="text-success" target="_blank"><i class="fa-solid fa-play text-success"></i> Show Trailer</a></button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="card mb-5 Upcoming-card  overflow-hidden " >
+          <div class="row no-gutters">
+            <div class="col-12 col-md-4 d-block d-md-none">
+              <img src="images/knight.png" class="card-img-top" alt="..." style="height: 400px !important;">
+            </div>
+            <div class="col-12 col-md-4 d-none d-md-block">
+              <img src="images/knight.png" class="card-img poster2 " alt="..." style="height: 500px !important;">
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="card-body mx-lg-2">
+                <h3 class="card-title mt-4 colorful">A Knight of the Seven Kingdoms: The Hedge Knight</h3>
+                <span class="badge bg-dark text-success mb-lg-4"></i>Adventure</span>
+                <span class="badge bg-dark text-success"></i>Action</span>
+                <span class="badge bg-dark text-success"></i>Drama</span>
+                <span class="badge bg-dark text-success"></i>Fantasy</span>
+                <p class="release-date text-secondary"><i class="fa-solid fa-calendar-days"></i> Excpected "late", 2025</p>
+                <div class="line-under mb-lg-3 bg-dark"></div>
+                <p class="card-text pb-lg-5">A Knight of the Seven Kingdoms is an upcoming American fantasy drama television series created by George R. R. Martin. A prequel to Game of Thrones (2011–2019),
+                    it is set to be the third television series in Martin's A Song of Ice and Fire franchise and uses his Tales of Dunk and Egg novellas as its basis. It stars Peter Claffey as Ser Duncan the Tall, the titular hedge knight, and Dexter Sol Ansell as Egg.
+                  The series is scheduled to be released on HBO in late 2025 and will consist of six episodes.</p>
+                <div class="upcoming-buttons mt-lg-5  mx-lg-3">
+                  <button type="button" class="btn btn-success text-light"><i class="fa-solid fa-plus"></i> Add to Watchlist</button>
+                  <button type="button" class="btn btn-success text-light"><i class="fa-solid fa-clock"></i> 50-60m/Ep</button>
+                  <button type="button" class="btn btn-success"><a href="https://www.youtube.com/watch?v=rNJG0cibEXo" class="text-light" target="_blank"><i class="fa-solid fa-play text-light"></i> Show Trailer</a></button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      </section>
+
+      <section>
+        <h2 class="my-5 text text-center h1 colorful ">Join US</h2>
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-8 col-md-3 social-card mx-auto mb-2">
+              <div class="social-content text-center border shadow">
+                <h3>Follow Us on:</h3>
+                <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fs-1 px-3 py-3 my-3 contact-i shadow"></i></a>
+                <p class="fs-3">Facebook</p>
+              </div>
+            </div>
+              
+            <div class="col-8 col-md-3 social-card mx-auto mb-2">
+              <div class="social-content text-center border shadow">
+                <h3>Follow Us on:</h3>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-square-instagram fs-1 px-3 py-3 my-3 contact-i shadow"></i></a>
+                <p class="fs-3">Instagram</p>
+              </div>
+              
+            </div>
+            <div class="col-8 col-md-3 social-card mx-auto mb-2">
+              <div class="social-content text-center border shadow">
+                <h3>Follow Us on:</h3>
+                <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter fs-1 px-3 py-3 my-3 contact-i shadow"></i></a>
+                <p class="fs-3">X (Twitter)</p>
+              </div>
+              
+            </div>
+            <div class="col-8 col-md-3 social-card mx-auto mb-2">
+              <div class="social-content text-center border shadow">
+                <h3>Follow Us on:</h3>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube fs-1 px-3 py-3 my-3 contact-i  shadow"></i></a>
+                <p class="fs-3">Youtube</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+      <footer >
+        <div class="container-fluid bg-dark">
+          <div class="container text-light py-5">
+            <div class="row">
+              <div class="col-12 col-md-4" >
+                <div class=" border-bottom border-top mb-2">
+                  <img src="images/about.jpg" class="rounded-circle w-25 py-2" alt="logo">
+                  <span class="text-success fs-2 fw-bold colorful"> About Us</span>
+                  
+                </div>
+                <div class="">
+                  <p>Epic Shows is a nonprofit organization dedicated to providing enriching and memorable entertainment experiences for all.<br>
+                        We believe in the power of entertainment to bring communities together and make a positive impact. </p>
+                </div>
+                
+              </div>
+
+              
+              <div class="col-12 col-md-4" >
+                <div class=" border-bottom border-top mb-2 ">
+                  <img src="images/useful-links.png" class="rounded-circle w-25 py-2" alt="logo">
+                  <span class="text-success fs-2 fw-bold colorful "> Useful Links</span>
+                </div>
+                <div>
+                  <p><a href="https://www.imdb.com/?ref_=nv_home" target="_blank" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">IMDB</a></p>
+                  <p><a href="https://www.rottentomatoes.com/" target="_blank" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Rotten Tomatoes</a></p>
+                  <p><a href="https://hbo.max.com/" target="_blank" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">HBO MAX</a></p>
+                  <p><a href="https://www.netflix.com/nl-en/" target="_blank" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">NETFLIX</a></p>
+                  
+                </div>
+              </div>
+              
+              <div class="col-12 col-md-4" >
+                <div class=" border-bottom border-top mb-2">
+                  <img src="images/Logo.jpg" class="rounded-circle w-25 py-2 " alt="logo">
+                  <span class="text-success fs-2 fw-bold colorful "> EPIC-SHOWS</span>
+                </div>
+                <div>
+                  <Ul class="footer-list list-unstyled ">
+                            <li class="li1 fw-bold fs-3 ">Contact US:</li>
+                            <li>Tel: +963-988-600-234</li>
+                            <li>Address: Syria </li>
+                            <li>Email: yazan.dawleh@gmail.com</li>
+                        </Ul>
+                </div>
+              </div>
+            </div>
+            <div class="container border-top border-bottom text-center my-3">
+              <p class="footer-copyright my-3 colorful">
+                Copyright &copy; 2025 All rights reserved | This template is made with <i class="fa-solid fa-heart heart"></i> by <a href="https://www.facebook.com/yazan.dw1/" target="_blank">Yazan Douleh</a>
+            </p>
+
+            </div>
+          </div>
+        </div>
+
+        
+      </footer>
+
+
+
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        </script>
+
+        <script>
+          var copybtn= document.querySelectorAll(".copybtn")
+          copybtn.forEach(function(item){
+            item.addEventListener("click",function(){
+            alert("تم نسخ النص الى الحافظة") 
+            
+            
+          })
+        })
+        
+        </script>
+
+
+
+</body>
+</html>
